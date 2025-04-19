@@ -28,7 +28,7 @@
     <img src="https://cdn.modrinth.com/data/qpe01spE/7aa6cfd294ab0004d2fd7cbe7878ba54025961b9.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Cobblemon: SafePastures</h3>
 
   <p align="center">
     Decorate your pastures without fear
