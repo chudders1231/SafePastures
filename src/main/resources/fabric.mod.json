@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "safepastures",
+  "version": "${version}",
+  "name": "Safe Pastures",
+  "description": "Making pastures safer for your precious pokemon.",
+  "authors": [
+    "chadlymasterson"
+  ],
+  "license": "MIT License",
+  "environment": "*",
+  "icon": "assets/safepastures/icon.png",
+  "entrypoints": {
+    "main": [
+      "chadlymasterson.safepastures.SafePastures"
+    ]
+  },
+  "mixins": [
+    "safepastures.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric": "*",
+    "minecraft": "1.20.1",
+    "cobblemon": ">=1.5.2"
+  }
+}
