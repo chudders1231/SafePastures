@@ -2,7 +2,7 @@ plugins {
     id("java")
     id("dev.architectury.loom") version("1.7-SNAPSHOT")
     id("architectury-plugin") version("3.4-SNAPSHOT")
-    kotlin("jvm") version "1.9.23"
+    kotlin("jvm") version "1.8.22"
 }
 
 group = "chadlymasterson.safepastures"

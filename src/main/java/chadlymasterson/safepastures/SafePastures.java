@@ -1,16 +1,11 @@
 package chadlymasterson.safepastures;
 
-import com.cobblemon.mod.common.platform.events.ServerEvent;
-import com.cobblemon.mod.common.platform.events.ServerTickEvent;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 
 public class SafePastures implements ModInitializer {
@@ -33,7 +28,7 @@ public class SafePastures implements ModInitializer {
         ServerWorld world = server.getOverworld();
 
         if (Boolean.getBoolean("fabric.development")) {
-            System.out.println("[SafePastures] Running in development mode!");
+            LOGGER.info("Running in development mode!");
             // Dev-only code here
 
             LOGGER.info(getConfig(world).toJsonString());
@@ -41,7 +36,7 @@ public class SafePastures implements ModInitializer {
     }
 
     public static Identifier id(String path) {
-        return Identifier.of(MOD_ID, path);
+        return new Identifier(MOD_ID, path);
     }
 
     public static ConfigLoader getConfig(ServerWorld serverWorld) {
