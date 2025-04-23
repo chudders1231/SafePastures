@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "chadlymasterson.safepastures"
-version = "1.1.0-RELEASE"
+version = "1.1.0+1.21.1"
 
 val minecraft_version: String by project
 val yarn_mappings: String by project
