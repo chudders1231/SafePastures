@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "chadlymasterson.safepastures"
-version = "1.1.0-RELEASE"
+version = "1.1.0+1.20.1"
 
 architectury {
     platformSetupLoomIde()
