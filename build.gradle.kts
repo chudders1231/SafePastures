@@ -2,11 +2,18 @@ plugins {
     id("java")
     id("dev.architectury.loom") version("1.7-SNAPSHOT")
     id("architectury-plugin") version("3.4-SNAPSHOT")
-    kotlin("jvm") version "1.8.22"
+    kotlin("jvm") version "1.9.23"
 }
 
 group = "chadlymasterson.safepastures"
 version = "1.1.0+1.20.1"
+
+val minecraft_version: String by project
+val yarn_mappings: String by project
+val loader_version: String by project
+val api_version: String by project
+val kotlin_version: String by project
+val cobblemon_version: String by project
 
 architectury {
     platformSetupLoomIde()
@@ -29,15 +36,15 @@ repositories {
 }
 
 dependencies {
-    minecraft ("com.mojang:minecraft:1.20.1")
-    mappings ("net.fabricmc:yarn:1.20.1+build.10")
-    modImplementation ("net.fabricmc:fabric-loader:0.16.13")
+    minecraft ("com.mojang:minecraft:$minecraft_version")
+    mappings ("net.fabricmc:yarn:$yarn_mappings")
+    modImplementation ("net.fabricmc:fabric-loader:$loader_version")
 
-    modImplementation("net.fabricmc.fabric-api:fabric-api:0.92.5+1.20.1")
-    modImplementation(fabricApi.module("fabric-command-api-v2", "0.92.5+1.20.1"))
+    modImplementation("net.fabricmc.fabric-api:fabric-api:$api_version")
+    modImplementation(fabricApi.module("fabric-command-api-v2", "$api_version"))
 
-    modImplementation("net.fabricmc:fabric-language-kotlin:1.9.6+kotlin.1.8.22")
-    modImplementation("com.cobblemon:fabric:1.5.2+1.20.1")
+    modImplementation("net.fabricmc:fabric-language-kotlin:$kotlin_version")
+    modImplementation("com.cobblemon:fabric:$cobblemon_version")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.0")
