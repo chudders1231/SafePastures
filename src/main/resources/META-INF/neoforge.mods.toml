@@ -1,0 +1,38 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+issueTrackerURL = "https://github.com/chudders1231/SafePastures/issues/new?labels=bug&template=bug_report.md"
+license = "MIT License"
+
+[[mods]]
+modId = "safepastures_neoforge"
+version = "${version}"
+displayName = "Safe Pastures"
+authors = "chadlymasterson"
+description = '''
+Making pastures safer for your precious pokemon.
+'''
+#logoFile = ""
+
+[[dependencies.safepastures_neoforge]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.21.1]"
+ordering = "NONE"
+side = "SERVER"
+
+[[dependencies.safepastures_neoforge]]
+modId = "neoforge"
+mandatory = true
+versionRange = "[21.1.66,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.safepastures_neoforge]]
+modId = "cobblemon"
+mandatory = true
+versionRange = "[1.6.0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[mixins]]
+config="safepastures.mixins.json"
