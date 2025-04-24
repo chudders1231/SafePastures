@@ -65,7 +65,4 @@ public class PokemonEntityMixin {
         if (self.getFrozenTicks() > 0) self.setFrozenTicks(0);
     }
 
-    private boolean isInPasture(LivingEntity self) {
-        return self.getWorld().getRegistryKey().getValue().getPath().contains("pasture");
-    }
 }
