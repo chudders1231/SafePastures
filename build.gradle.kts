@@ -1,12 +1,12 @@
 plugins {
     id("java")
-    id("dev.architectury.loom") version("1.7-SNAPSHOT")
+    id("dev.architectury.loom") version("1.9-SNAPSHOT")
     id("architectury-plugin") version("3.4-SNAPSHOT")
-    kotlin("jvm") version "1.9.23"
+    kotlin("jvm") version "2.2.20"
 }
 
 group = "chadlymasterson.safepastures"
-version = "1.1.0+1.21.1"
+version = "1.1.1+1.21.1"
 
 val minecraft_version: String by project
 val yarn_mappings: String by project
@@ -41,7 +41,7 @@ dependencies {
     modImplementation ("net.fabricmc:fabric-loader:$loader_version")
 
     modImplementation("net.fabricmc.fabric-api:fabric-api:$api_version")
-    modImplementation(fabricApi.module("fabric-command-api-v2", "$api_version"))
+    modImplementation(fabricApi.module("fabric-command-api-v2", api_version))
 
     modImplementation("net.fabricmc:fabric-language-kotlin:$kotlin_version")
     modImplementation("com.cobblemon:fabric:$cobblemon_version")
