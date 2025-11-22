@@ -1,13 +1,13 @@
 plugins {
     id("java")
-    id("dev.architectury.loom") version("1.7-SNAPSHOT")
+    id("dev.architectury.loom") version("1.9-SNAPSHOT")
     id("architectury-plugin") version("3.4-SNAPSHOT")
-    kotlin("jvm") version "1.9.23"
+    kotlin("jvm") version "2.2.20"
 }
 
 
 group = "chadlymasterson.safepastures"
-version = "1.1.0+1.21.1"
+version = "1.1.1+1.21.1"
 
 architectury {
     platformSetupLoomIde()
@@ -32,7 +32,7 @@ dependencies {
     mappings(loom.officialMojangMappings())
     neoForge("net.neoforged:neoforge:21.1.66")
 
-    modImplementation("com.cobblemon:neoforge:1.6.0+1.21.1-SNAPSHOT")
+    modImplementation("com.cobblemon:neoforge:1.7.0+1.21.1-SNAPSHOT")
     //Needed for cobblemon
     implementation("thedarkcolour:kotlinforforge-neoforge:5.3.0") {
         exclude("net.neoforged.fancymodloader", "loader")
