@@ -30,7 +30,7 @@ side = "BOTH"
 [[dependencies.safepastures_neoforge]]
 modId = "cobblemon"
 mandatory = true
-versionRange = "[1.6.0,)"
+versionRange = "[1.8.0,)"
 ordering = "AFTER"
 side = "BOTH"
 
